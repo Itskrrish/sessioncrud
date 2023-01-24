@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\App;
 use Illuminate\Support\Facades\Artisan;
 use Illuminate\Support\Facades\Auth;
 use App\Http\Controllers\HomeController;
+use App\Http\Controllers\SlotController;
 
 /*
 |--------------------------------------------------------------------------
@@ -19,5 +20,9 @@ use App\Http\Controllers\HomeController;
 Route::get('/', function () {
     return view('forms.create');
 });
+Route::get('/addslots', function () {
+    return view('slots.create');
+});
 
 Route::resource('home', HomeController::class);
+Route::resource('slots', SlotController::class);
