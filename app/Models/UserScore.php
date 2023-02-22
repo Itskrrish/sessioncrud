@@ -4,16 +4,17 @@ namespace App\Models;
 
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 
-class User extends Authenticatable
+class UserScore extends Authenticatable
 {
-    use HasApiTokens, HasFactory, Notifiable;
+
 
     /**
      * The attributes that are mass assignable.
      *
      * @var array<int, string>
      */
-    protected $fillable = ['name',];
+    protected $fillable = ['user_id', 'game_id', 'score'];
+    protected $table = 'UseScore';
 
 /**
  * The attributes that should be hidden for serialization.

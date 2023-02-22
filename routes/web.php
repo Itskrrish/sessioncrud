@@ -17,12 +17,6 @@ use App\Http\Controllers\SlotController;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('forms.create');
-});
-Route::get('/addslots', function () {
-    return view('slots.create');
-});
-
-Route::resource('home', HomeController::class);
-Route::resource('slots', SlotController::class);
+Route::get('/leaderboard', 'ApiController@LeaderBoard');
+Route::Post('/joingame', 'ApiController@join_game');
+Route::Post('/userscore', 'ApiController@user_score');
